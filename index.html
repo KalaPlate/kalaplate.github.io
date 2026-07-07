@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KalaPlate | Dev Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<!-- ══════════════════════════════════════════════
+     MAIN PORTFOLIO PAGE
+═══════════════════════════════════════════════ -->
+
+<div id="page-main" class="page active">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo" onclick="scrollToSection('home')">KALA<span>PLATE</span></div>
+    <div class="nav-links">
+      <div class="nav-link active" onclick="scrollToSection('home')">Home</div>
+      <div class="nav-link" onclick="scrollToSection('about')">About</div>
+      <div class="nav-link" onclick="scrollToSection('projects')">Works</div>
+      <div class="nav-link" onclick="scrollToSection('skills')">Skills</div>
+      <div class="nav-link" onclick="scrollToSection('contact')">Contact</div>
+    </div>
+    <div class="nav-auth">
+      <button class="btn-ghost" onclick="showPage('page-signin')">Sign In</button>
+      <button class="btn-primary" onclick="showPage('page-signup')">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-tag">// Available for hire</div>
+        <h1 class="hero-name glitch">
+          <span class="line1">KALA</span>
+          <span class="line2">PLATE</span>
+        </h1>
+        <div class="hero-role" id="typed-role">
+          <span id="typed-text"></span><span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-bio">
+          I build both digital and physical experiences. As a <strong>web developer, professional video editor, and graphic designer</strong>, I combine clean code, visual storytelling, graphical design, and artificial intelligence to bring creative ideas to life.
+        </p>
+        <div class="hero-ctas">
+          <button class="cta-primary" onclick="scrollToSection('projects')">View Projects</button>
+          <button class="cta-secondary" onclick="scrollToSection('contact')">Let's Talk</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num" data-count="1">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="2">0</div>
+            <div class="stat-label">Years Exp.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-frame">
+          <div class="avatar-hex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="#cbb4b4" style="width: 100%; height: 100%; max-width: 90px; max-height: 90px; padding: 10px; box-sizing: border-box; position: relative; z-index: 1; filter: drop-shadow(0 0 10px rgba(155, 48, 255, 0.8)) drop-shadow(0 0 25px rgba(155, 48, 255, 0.6)); margin: auto;">
+              <path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM88,160a8,8,0,1,1-8,8A8,8,0,0,1,88,160ZM48,48H80v97.38a24,24,0,1,0,16,0V115.31l48,48V208H48ZM208,208H160V160a8,8,0,0,0-2.34-5.66L96,92.69V48h32V72a8,8,0,0,0,2.34,5.66l16,16A23.74,23.74,0,0,0,144,104a24,24,0,1,0,24-24,23.74,23.74,0,0,0-10.34,2.35L144,68.69V48h64V208ZM168,96a8,8,0,1,1-8,8A8,8,0,0,1,168,96Z"></path>
+            </svg>
+          </div>
+          <div class="avatar-corner tl"></div>
+          <div class="avatar-corner tr"></div>
+          <div class="avatar-corner bl"></div>
+          <div class="avatar-corner br"></div>
+          <div class="avatar-badge">OPEN TO WORK</div>
+        </div>
+        <div class="floating-tag t1">Graphics</div>
+        <div class="floating-tag t2">Frontend</div>
+        <div class="floating-tag t3">Automation</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about" style="background:var(--bg2);">
+    <div class="section">
+      <div class="section-label reveal">// 001 — About</div>
+      <h2 class="section-title reveal">Who Am <span class="accent">I_</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I am a student driven by a deep curiosity for digital creation. Beyond my academics, I specialize in <strong>web development and professional video editing</strong>. Whether I am designing a responsive website or crafting a compelling visual story, I am constantly pushing myself to master new skills and turn ideas into reality.</p>
+          <p>My journey began with digital storytelling through <strong>professional video editing</strong>, which sparked my curiosity to build the platforms where media lives. This led me to master <strong>front-end web development</strong>, allowing me to bridge the gap between creative visual media and clean, responsive code.</p>
+          <p>Currently, I am building applications designed to simplify everyday life, with a strong focus on <strong>low-cost, highly secure device automation</strong>. As a developer, my ultimate goal is creating flawless, "set-and-forget" systems that run seamlessly and autonomously in the background.</p>
+          <div class="about-details">
+            <div class="detail-item">
+              <div class="detail-label">Location</div>
+              <div class="detail-value">Chattogram, Bangladesh</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Availability</div>
+              <div class="detail-value">Open to Projects</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Focus</div>
+              <div class="detail-value">Web Dev & Automation</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Experience</div>
+              <div class="detail-value">2+ Years</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Email</div>
+              <div class="detail-value">kalaplate980@gmail.com</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-label">Status</div>
+              <div class="detail-value" style="color:#0f9">● Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-services reveal">
+          <div class="service-card">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40ZM48,56H208a8,8,0,0,1,8,8v80H40V64A8,8,0,0,1,48,56ZM208,184H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"></path></svg></div>
+            <div class="service-title">Front-End Development</div>
+            <div class="service-desc">Building clean, responsive, and visually engaging websites. I turn complex problems into elegant, user-friendly digital spaces from the ground up.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M232,216H183.36A103.95,103.95,0,1,0,128,232H232a8,8,0,0,0,0-16ZM40,128a88,88,0,1,1,88,88A88.1,88.1,0,0,1,40,128Zm88-24a24,24,0,1,0-24-24A24,24,0,0,0,128,104Zm0-32a8,8,0,1,1-8,8A8,8,0,0,1,128,72Zm24,104a24,24,0,1,0-24,24A24,24,0,0,0,152,176Zm-32,0a8,8,0,1,1,8,8A8,8,0,0,1,120,176Zm56-24a24,24,0,1,0-24-24A24,24,0,0,0,176,152Zm0-32a8,8,0,1,1-8,8A8,8,0,0,1,176,120ZM80,104a24,24,0,1,0,24,24A24,24,0,0,0,80,104Zm0,32a8,8,0,1,1,8-8A8,8,0,0,1,80,136Z"></path></svg></div>
+            <div class="service-title">Professional Video Editing</div>
+            <div class="service-desc">Crafting compelling visual narratives. I use precise editing to bring stories to life and create highly engaging digital media.</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm109.94-52.79a8,8,0,0,0-3.89-5.4l-29.83-17-.12-33.62a8,8,0,0,0-2.83-6.08,111.91,111.91,0,0,0-36.72-20.67,8,8,0,0,0-6.46.59L128,41.85,97.88,25a8,8,0,0,0-6.47-.6A112.1,112.1,0,0,0,54.73,45.15a8,8,0,0,0-2.83,6.07l-.15,33.65-29.83,17a8,8,0,0,0-3.89,5.4,106.47,106.47,0,0,0,0,41.56,8,8,0,0,0,3.89,5.4l29.83,17,.12,33.62a8,8,0,0,0,2.83,6.08,111.91,111.91,0,0,0,36.72,20.67,8,8,0,0,0,6.46-.59L128,214.15,158.12,231a7.91,7.91,0,0,0,3.9,1,8.09,8.09,0,0,0,2.57-.42,112.1,112.1,0,0,0,36.68-20.73,8,8,0,0,0,2.83-6.07l.15-33.65,29.83-17a8,8,0,0,0,3.89-5.4A106.47,106.47,0,0,0,237.94,107.21Zm-15,34.91-28.57,16.25a8,8,0,0,0-3,3c-.58,1-1.19,2.06-1.81,3.06a7.94,7.94,0,0,0-1.22,4.21l-.15,32.25a95.89,95.89,0,0,1-25.37,14.3L134,199.13a8,8,0,0,0-3.91-1h-.19c-1.21,0-2.43,0-3.64,0a8.08,8.08,0,0,0-4.1,1l-28.84,16.1A96,96,0,0,1,67.88,201l-.11-32.2a8,8,0,0,0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09,8.09,0,0,0-3-3.06l-28.6-16.29a90.49,90.49,0,0,1,0-28.26L61.67,97.63a8,8,0,0,0,3-3c.58-1,1.19-2.06,1.81-3.06a7.94,7.94,0,0,0,1.22-4.21l.15-32.25a95.89,95.89,0,0,1,25.37-14.3L122,56.87a8,8,0,0,0,4.1,1c1.21,0,2.43,0,3.64,0a8.08,8.08,0,0,0,4.1-1l28.84-16.1A96,96,0,0,1,188.12,55l.11,32.2a8,8,0,0,0,1.22,4.22c.62,1,1.23,2,1.8,3.06a8.09,8.09,0,0,0,3,3.06l28.6,16.29A90.49,90.49,0,0,1,222.9,142.12Z"></path></svg></div>
+            <div class="service-title">Secure Device Automation</div>
+            <div class="service-desc">Developing low-cost, secure automation apps designed to streamline daily routines and run flawlessly in the background.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section">
+      <div class="section-label reveal">// 002 — Works</div>
+      <h2 class="section-title reveal">Featured <span class="accent">Projects_</span></h2>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-status status-live">Live</div>
+          <div class="project-thumb project-thumb-bg1"><img src="./image.png" alt="NumQuest Screenshot"></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">Supabase</span>
+            </div>
+            <div class="project-title">NumQuest</div>
+            <div class="project-desc">A number guessing game I built with a proper global leaderboard, not just a local high-score list. You pick a difficulty, guess the number, and your score gets saved to a shared backend so it's visible to anyone else playing.</div>
+            <div class="project-links">
+              <a href="https://rebrand.ly/kpnumquest" target="_blank"><span class="project-link">→ Live Demo</span></a>
+              <a href="https://github.com/KalaPlate/NumQuest" target="_blank"><span class="project-link">→ GitHub</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SKILLS -->
+  <section id="skills" style="background:var(--bg2);">
+    <div class="section">
+      <div class="section-label reveal">// 003 — Skills</div>
+      <h2 class="section-title reveal">Tech <span class="accent">Stack_</span></h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skills-group-title reveal">Analytical & Core Skills</div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Self-Driven Learning & Time Management</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="95"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Attention to Detail & Accuracy</span><span class="skill-pct">85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">UI/UX & Visual Design</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Analytical Problem-Solving</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Process Documentation & Organization</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="skills-group-title reveal">Technical & Digital Skills</div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Professional Video Editing</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Front-End Web Development</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Technical Troubleshooting</span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="60"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">Secure Device Automation</span><span class="skill-pct">50%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="50"></div></div>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-header"><span class="skill-name">System Architecture</span><span class="skill-pct">35%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="35"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-cloud reveal" style="margin-top:60px;">
+        <span class="tech-chip">HTML</span>
+        <span class="tech-chip">CSS</span>
+        <span class="tech-chip">Python</span>
+        <span class="tech-chip">Node.js</span>
+        <span class="tech-chip">Claude</span>
+        <span class="tech-chip">Gemini</span>
+        <span class="tech-chip">Premiere Pro</span>
+        <span class="tech-chip">Adobe Express</span>
+        <span class="tech-chip">Git & GitHub</span>
+        <span class="tech-chip">UI/UX Prototyping</span>
+        <span class="tech-chip">Secure Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section">
+      <div class="section-label reveal">// 004 — Contact</div>
+      <h2 class="section-title reveal">Get In <span class="accent">Touch_</span></h2>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <div class="contact-info-title">Let's Build Something Together</div>
+          <div class="contact-info-sub">Whether it's a cross-platform audio app, a complex native integration, or just a chat about PCM buffers — I'm here for it.</div>
+          <div class="contact-links">
+            <div class="contact-link-item">
+              <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></span>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div id="emaillink" class="contact-link-val" onclick="copyText()" style="cursor: pointer;">kalaplate980@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-link-item">
+              <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg></span>
+              <div>
+                <div class="contact-link-label">GitHub</div>
+                <a href="https://github.com/KalaPlate" target="_blank" class="contact-link-val">github.com/KalaPlate</a>
+              </div>
+            </div>
+            <div class="contact-link-item">
+              <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg></span>
+              <div>
+                <div class="contact-link-label">Location</div>
+                <div class="contact-link-val">Chattogram, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input class="form-input" type="text" placeholder="Your Name" id="cf-name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" placeholder="your@email.com" id="cf-email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input class="form-input" type="text" placeholder="Project Inquiry / Collab / Hello..." id="cf-subject" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project..." id="cf-message"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitContact()">Transmit Message →</button>
+          <div class="form-success" id="cf-success">✓ &nbsp; MESSAGE RECEIVED. I'LL BE IN TOUCH SOON.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">KALAPLATE</div>
+    <div class="footer-copy">
+      <div style="font-family:var(--font-m);font-size:0.6rem;letter-spacing:2px;color:var(--dim);">
+        © 2026 KalaPlate — Built with aesthetics & caffeine
+      </div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/KalaPlate" target="_blank"><div class="social-btn" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg></div></a>
+      <a href="https://x.com/kalaplate" target="_blank"><div class="social-btn" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg></div></a>
+      <a href="https://mail.google.com/mail" target="_blank"><div class="social-btn" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#cbb4b4" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg></div></a>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SIGN IN PAGE
+═══════════════════════════════════════════════ -->
+<div id="page-signin" class="page">
+  <div class="auth-page">
+    <div class="auth-bg-grid"></div>
+    <div class="auth-bg-glow1"></div>
+    <div class="auth-bg-glow2"></div>
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-brand">KalaPlate</div>
+        <div class="auth-title">Welcome Back</div>
+        <div class="auth-sub">// Sign in to access your dev portal</div>
+      </div>
+      <div class="auth-body">
+        <div class="auth-notification" id="signin-error"></div>
+        <div class="auth-form-group">
+          <label class="auth-label">Email Address</label>
+          <input class="auth-input" type="email" id="si-email" placeholder="your@email.com" />
+        </div>
+        <div class="auth-form-group">
+          <label class="auth-label">Password</label>
+          <input class="auth-input" type="password" id="si-password" placeholder="••••••••••" />
+        </div>
+        <div class="auth-options">
+          <label class="auth-remember">
+            <input type="checkbox" /> Remember me
+          </label>
+          <button class="auth-forgot" onclick="">Forgot password?</button>
+        </div>
+        <button class="auth-submit" onclick="handleSignIn()">Access Portal →</button>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="auth-alt-btn" onclick="showPage('page-signup')">Create New Account</button>
+        <div class="auth-msg">Don't have an account? <span onclick="showPage('page-signup')">Register now</span></div>
+      </div>
+      <div class="auth-footer-link">
+        <button class="back-link" onclick="showPage('page-main')">← Back to Portfolio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SIGN UP PAGE
+═══════════════════════════════════════════════ -->
+<div id="page-signup" class="page">
+  <div class="auth-page">
+    <div class="auth-bg-grid"></div>
+    <div class="auth-bg-glow1"></div>
+    <div class="auth-bg-glow2"></div>
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-brand">KalaPlate</div>
+        <div class="auth-title">Create Account</div>
+        <div class="auth-sub">// Initialize your dev profile</div>
+      </div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="basic">Basic Info</button>
+        <button class="auth-tab" data-tab="secure">Security</button>
+      </div>
+      <div class="auth-body">
+        <div class="auth-notification" id="signup-error"></div>
+
+        <!-- Tab 1: Basic -->
+        <div class="auth-form-panel active" id="tab-basic">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="auth-form-group">
+              <label class="auth-label">First Name</label>
+              <input class="auth-input" type="text" id="su-fname" placeholder="John" />
+            </div>
+            <div class="auth-form-group">
+              <label class="auth-label">Last Name</label>
+              <input class="auth-input" type="text" id="su-lname" placeholder="Doe" />
+            </div>
+          </div>
+          <div class="auth-form-group">
+            <label class="auth-label">Email Address</label>
+            <input class="auth-input" type="email" id="su-email" placeholder="your@email.com" />
+          </div>
+          <div class="auth-form-group">
+            <label class="auth-label">Username</label>
+            <input class="auth-input" type="text" id="su-user" placeholder="kalaplate_dev" />
+          </div>
+          <button class="auth-submit" onclick="nextTab()">Continue →</button>
+          <div class="auth-msg">Already registered? <span onclick="showPage('page-signin')">Sign in</span></div>
+        </div>
+
+        <!-- Tab 2: Secure -->
+        <div class="auth-form-panel" id="tab-secure">
+          <div class="auth-form-group">
+            <label class="auth-label">Password</label>
+            <input class="auth-input" type="password" id="su-pass" placeholder="••••••••••" oninput="checkStrength(this.value)" />
+            <div class="auth-strength">
+              <div class="strength-bar" id="sb1"></div>
+              <div class="strength-bar" id="sb2"></div>
+              <div class="strength-bar" id="sb3"></div>
+              <div class="strength-bar" id="sb4"></div>
+              <span class="strength-label" id="slabel">—</span>
+            </div>
+          </div>
+          <div class="auth-form-group">
+            <label class="auth-label">Confirm Password</label>
+            <input class="auth-input" type="password" id="su-pass2" placeholder="••••••••••" />
+          </div>
+          <div class="auth-form-group">
+            <label class="auth-label">Role / What You Build</label>
+            <input class="auth-input" type="text" id="su-role" placeholder="e.g. Flutter Developer" />
+          </div>
+          <button class="auth-submit" onclick="handleSignUp()">Initialize Account →</button>
+          <button class="auth-alt-btn" onclick="prevTab()" style="margin-top:10px;">← Go Back</button>
+        </div>
+      </div>
+      <div class="auth-footer-link">
+        <button class="back-link" onclick="showPage('page-main')">← Back to Portfolio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SUCCESS PORTAL PAGE
+═══════════════════════════════════════════════ -->
+<div id="page-portal" class="page">
+  <div class="auth-page">
+    <div class="auth-bg-grid"></div>
+    <div class="auth-bg-glow1"></div>
+    <div class="auth-bg-glow2"></div>
+    <div class="auth-card" style="text-align:center;padding:0;">
+      <div style="padding:50px 40px;">
+        <div style="font-size:4rem;margin-bottom:20px;filter:drop-shadow(0 0 20px rgba(245,230,66,0.8))">⚡</div>
+        <div style="font-family:var(--font-h);font-size:0.7rem;letter-spacing:4px;color:var(--yellow);margin-bottom:16px;">ACCESS GRANTED</div>
+        <div style="font-family:var(--font-h);font-size:1.8rem;font-weight:900;color:var(--white);margin-bottom:12px;" id="portal-greeting">Welcome Back!</div>
+        <div style="font-family:var(--font-m);font-size:0.75rem;color:var(--dim);letter-spacing:1px;margin-bottom:36px;" id="portal-sub">You are now connected to the dev portal.</div>
+        <div style="background:var(--bg2);border:1px solid var(--border);padding:20px;margin-bottom:28px;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);">
+          <div style="font-family:var(--font-m);font-size:0.65rem;color:var(--yellow);letter-spacing:2px;margin-bottom:8px;">// SESSION INFO</div>
+          <div style="font-family:var(--font-m);font-size:0.7rem;color:var(--dim);line-height:2;" id="portal-info"></div>
+        </div>
+        <button class="auth-submit" onclick="showPage('page-main')" style="width:100%;">Return to Portfolio →</button>
+        <div style="margin-top:16px;">
+          <button class="back-link" onclick="logout()">⊘ &nbsp;Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
