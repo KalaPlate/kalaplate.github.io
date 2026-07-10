@@ -11,13 +11,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-<!-- ══════════════════════════════════════════════
-     MAIN PORTFOLIO PAGE
-═══════════════════════════════════════════════ -->
 
 <div id="page-main" class="page active">
-
-  <!-- NAV -->
+     
+     <!--nav-->    
   <nav>
     <div class="nav-logo" onclick="scrollToSection('home')">KALA<span>PLATE</span></div>
     <div class="nav-links">
@@ -32,8 +29,8 @@
       <button class="btn-primary" onclick="showPage('page-signup')">Sign Up</button>
     </div>
   </nav>
-
-  <!-- HERO -->
+     
+     <!--intro-->
   <section id="home">
     <div class="hero-grid-bg"></div>
     <div class="hero-glow-1"></div>
@@ -85,10 +82,9 @@
       </div>
     </div>
   </section>
-
   <div class="section-divider"></div>
-
-  <!-- ABOUT -->
+     
+     <!--about-->
   <section id="about" style="background:var(--bg2);">
     <div class="section">
       <div class="section-label reveal">// 001 — About</div>
@@ -145,10 +141,8 @@
       </div>
     </div>
   </section>
-
   <div class="section-divider"></div>
-
-  <!-- PROJECTS -->
+     <!--projects-->
   <section id="projects">
     <div class="section">
       <div class="section-label reveal">// 002 — Works</div>
@@ -175,14 +169,12 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
   <div class="section-divider"></div>
 
-  <!-- SKILLS -->
+     <!--skills-->
   <section id="skills" style="background:var(--bg2);">
     <div class="section">
       <div class="section-label reveal">// 003 — Skills</div>
@@ -250,10 +242,8 @@
       </div>
     </div>
   </section>
-
   <div class="section-divider"></div>
-
-  <!-- CONTACT -->
+     <!--contact-->
   <section id="contact">
     <div class="section">
       <div class="section-label reveal">// 004 — Contact</div>
@@ -312,7 +302,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+     <!--footer-->
   <footer>
     <div class="footer-logo">KALAPLATE</div>
     <div class="footer-copy">
@@ -327,10 +317,8 @@
     </div>
   </footer>
 </div>
-
-<!-- ══════════════════════════════════════════════
-     SIGN IN PAGE
-═══════════════════════════════════════════════ -->
+     
+     <!--signin-->
 <div id="page-signin" class="page">
   <div class="auth-page">
     <div class="auth-bg-grid"></div>
@@ -370,9 +358,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     SIGN UP PAGE
-═══════════════════════════════════════════════ -->
+     <!--signup-->
 <div id="page-signup" class="page">
   <div class="auth-page">
     <div class="auth-bg-grid"></div>
@@ -391,7 +377,7 @@
       <div class="auth-body">
         <div class="auth-notification" id="signup-error"></div>
 
-        <!-- Tab 1: Basic -->
+        <!-- tab 1 - basic -->
         <div class="auth-form-panel active" id="tab-basic">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
             <div class="auth-form-group">
@@ -415,7 +401,7 @@
           <div class="auth-msg">Already registered? <span onclick="showPage('page-signin')">Sign in</span></div>
         </div>
 
-        <!-- Tab 2: Secure -->
+        <!-- tab 2 - secure -->
         <div class="auth-form-panel" id="tab-secure">
           <div class="auth-form-group">
             <label class="auth-label">Password</label>
@@ -447,9 +433,7 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════
-     SUCCESS PORTAL PAGE
-═══════════════════════════════════════════════ -->
+<!--success portal page-->
 <div id="page-portal" class="page">
   <div class="auth-page">
     <div class="auth-bg-grid"></div>
