@@ -1,4 +1,4 @@
-/* ─── PAGE SWITCHING ─────────────────────────────────── */
+/*page switching*/
 const users = JSON.parse(localStorage.getItem('kp_users') || '[]');
 let currentUser = JSON.parse(localStorage.getItem('kp_session') || 'null');
 
@@ -9,7 +9,7 @@ function showPage(id) {
   if (id === 'page-main') { initSkillBars(); initScrollReveal(); }
 }
 
-/* ─── NAV SCROLL ─────────────────────────────────────── */
+/*nav scroll*/
 function scrollToSection(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
   links.forEach(l => l.classList.toggle('active', l.textContent.toLowerCase() === cur || (cur === 'home' && l.textContent === 'Home')));
 });
 
-/* ─── TYPEWRITER ──────────────────────────────────────── */
+/*typewriter*/
 const roles = [
   'Front-End Developer',
   'Professional Video Editor',
@@ -42,7 +42,7 @@ function type() {
 }
 type();
 
-/* ─── COUNTER ANIM ───────────────────────────────────── */
+/*counter aim*/
 function animCounters() {
   document.querySelectorAll('[data-count]').forEach(el => {
     const target = +el.dataset.count;
@@ -57,7 +57,7 @@ function animCounters() {
 }
 setTimeout(animCounters, 800);
 
-/* ─── SCROLL REVEAL ──────────────────────────────────── */
+/*scroll reveal*/
 function initScrollReveal() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -66,7 +66,7 @@ function initScrollReveal() {
 }
 initScrollReveal();
 
-/* ─── SKILL BARS ─────────────────────────────────────── */
+/*skill bars*/
 function initSkillBars() {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -83,7 +83,7 @@ function initSkillBars() {
 }
 setTimeout(initSkillBars, 300);
 
-/* ─── PROJECT FILTER ─────────────────────────────────── */
+/*project filter*/
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -97,7 +97,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-/* ─── CONTACT FORM ───────────────────────────────────── */
+/*contact form*/
 
 emailjs.init('vE2bhGZJACnIyCslf');
 
@@ -107,7 +107,7 @@ function submitContact() {
   const subject = document.getElementById('cf-subject').value.trim();
   const msg     = document.getElementById('cf-message').value.trim();
 
-  // Basic validation
+  // basic validation
   if (!name || !email || !msg) {
     alert('Please fill in all required fields.');
     return;
@@ -143,7 +143,7 @@ function submitContact() {
   });
 }
 
-/* ─── AUTH: SIGN IN ──────────────────────────────────── */
+/*auth: sign in*/
 function handleSignIn() {
   const email = document.getElementById('si-email').value.trim();
   const pass = document.getElementById('si-password').value;
@@ -157,7 +157,7 @@ function handleSignIn() {
   openPortal(found, false);
 }
 
-/* ─── AUTH: SIGN UP ──────────────────────────────────── */
+/*auth: sign up*/
 function nextTab() {
   const fname = document.getElementById('su-fname').value.trim();
   const email = document.getElementById('su-email').value.trim();
@@ -217,7 +217,7 @@ function showAuthErr(id, msg) {
   el.className = 'auth-notification error';
 }
 
-/* ─── PASSWORD STRENGTH ──────────────────────────────── */
+/*password strength*/
 function checkStrength(val) {
   const bars = [1,2,3,4].map(i => document.getElementById('sb' + i));
   const label = document.getElementById('slabel');
@@ -230,10 +230,10 @@ function checkStrength(val) {
   label.style.color = colors[score] || 'var(--dim)';
 }
 
-/* ─── AUTH TABS ──────────────────────────────────────── */
+/*auth tabs*/
 document.querySelectorAll('.auth-tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    // Manual tab switch only used on sign-in page; sign-up has own logic
+    // Manual tab switch only used on sign-in page, sign-up has own logic
   });
 });
 
