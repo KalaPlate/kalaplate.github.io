@@ -1,4 +1,4 @@
-  /* ─── DESIGN TOKENS ─────────────────────────────────────────── */
+  /*design tokens*/
 
 :root {
     --bg:       #080810;
@@ -24,7 +24,7 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  /* ─── RESET ──────────────────────────────────────────────────── */
+  /*reset*/
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
@@ -38,7 +38,7 @@
   img { max-width: 100%; }
   input, textarea, button { font-family: inherit; }
 
-  /* ─── SCANLINES OVERLAY ──────────────────────────────────────── */
+  /*scanlines overlay*/
   body::after {
     content: '';
     position: fixed; inset: 0;
@@ -53,7 +53,7 @@
     z-index: 9990;
   }
 
-  /* ─── NOISE TEXTURE ─────────────────────────────────────────── */
+  /*noise texture*/
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -63,11 +63,11 @@
     opacity: 0.3;
   }
 
-  /* ─── PAGE SYSTEM ────────────────────────────────────────────── */
+  /*page system*/
   .page { display: none; min-height: 100vh; }
   .page.active { display: block; }
 
-  /* ─── NAV ────────────────────────────────────────────────────── */
+  /*nav*/
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     height: 64px;
@@ -153,7 +153,7 @@
     transform: translateY(-1px);
   }
 
-  /* ─── HERO SECTION ───────────────────────────────────────────── */
+  /*hero section*/
   #home {
     min-height: 100vh;
     display: flex;
@@ -415,7 +415,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ─── SECTION BASE ───────────────────────────────────────────── */
+  /*section base*/
   .section {
     padding: 100px 0;
     max-width: 1200px;
@@ -453,7 +453,7 @@
     margin: 0;
   }
 
-  /* ─── ABOUT SECTION ──────────────────────────────────────────── */
+  /*about section*/
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -528,7 +528,7 @@
   }
   .service-desc { font-size: 0.9rem; color: var(--dim); line-height: 1.6; }
 
-  /* ─── PROJECTS SECTION ───────────────────────────────────────── */
+  /*projects section*/
   .projects-filter {
     display: flex; gap: 12px; flex-wrap: wrap;
     margin-bottom: 48px;
@@ -632,7 +632,7 @@
   .status-dev  { background: rgba(245,230,66,0.15); color: var(--yellow); border: 1px solid rgba(245,230,66,0.3); }
   .status-wip  { background: rgba(155,48,255,0.15); color: var(--purple3); border: 1px solid var(--border); }
 
-  /* ─── SKILLS SECTION ─────────────────────────────────────────── */
+  /*skills section*/
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -718,7 +718,7 @@
     background: rgba(245,230,66,0.05);
   }
 
-  /* ─── CONTACT SECTION ────────────────────────────────────────── */
+  /*contact section*/
   .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -849,7 +849,7 @@
   }
   .form-success.show { display: block; }
 
-  /* ─── FOOTER ─────────────────────────────────────────────────── */
+  /*footer*/
   footer {
     background: var(--bg2);
     border-top: 1px solid var(--border);
@@ -892,7 +892,7 @@
     transform: translateY(-3px);
   }
 
-  /* ─── AUTH PAGES ─────────────────────────────────────────────── */
+  /*auth pages*/
   .auth-page {
     min-height: 100vh;
     display: flex;
@@ -1188,7 +1188,7 @@
     color: #0f9;
   }
 
-  /* ─── SCROLL REVEAL ──────────────────────────────────────────── */
+  /*scroll reveal*/
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -1199,7 +1199,7 @@
     transform: translateY(0);
   }
 
-  /* ─── GLITCH EFFECT ──────────────────────────────────────────── */
+  /*glitch effect*/
   .glitch {
     position: relative;
     animation: glitch 8s infinite;
@@ -1213,7 +1213,7 @@
     95% { text-shadow: none; }
   }
 
-  /* ─── MOBILE ─────────────────────────────────────────────────── */
+  /*mobile*/
   @media (max-width: 900px) {
     nav { padding: 0 20px; }
     .nav-links { display: none; }
